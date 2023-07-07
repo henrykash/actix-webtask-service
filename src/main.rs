@@ -17,7 +17,7 @@ async fn main() {
     println!("Listening on  {addr}\n");
 
     // Run server
-    axum::Server::bind(&addr)
+    axum::Server::bind(&addr) 
         .serve(routes_hello.into_make_service())
         .await
         .unwrap();
